@@ -2250,6 +2250,7 @@ void WaveshareEPaper7P5InV2alt::dump_config() {
 void WaveshareEPaper7P5InBC::initialize() {
   /* The command sequence is similar to the 7P5In display but differs in subtle ways
   to allow for faster updates. */
+  this->reset_();
   // COMMAND POWER SETTING
   this->command(0x01);
   this->data(0x37);
