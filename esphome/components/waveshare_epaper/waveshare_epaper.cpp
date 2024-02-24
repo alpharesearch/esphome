@@ -2316,7 +2316,8 @@ void HOT WaveshareEPaper7P5InBC::display() {
       eight_pixels <<= 1;
       uint8_t right_nibble = (eight_pixels & 0x80) ? 0x04 : 0x00;
       eight_pixels <<= 1;
-      this->write_byte(left_nibble | right_nibble);
+      //this->write_byte(left_nibble | right_nibble);
+      this->write_byte(0x44 | 0x44);
     }
     App.feed_wdt();
   }
