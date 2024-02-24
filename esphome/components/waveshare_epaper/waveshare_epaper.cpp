@@ -2314,7 +2314,7 @@ void HOT WaveshareEPaper7P5InBC::display() {
       to draw using the color pixels, change '0x30' with '0x40' and '0x03' with '0x04' below. */
       uint8_t left_nibble = (eight_pixels & 0x80) ? 0x30 : 0x00;
       eight_pixels <<= 1;
-      uint8_t right_nibble = (eight_pixels & 0x80) ? 0x03 : 0x00;
+      uint8_t right_nibble = (eight_pixels & 0x80) ? 0x04 : 0x00;
       eight_pixels <<= 1;
       this->write_byte(left_nibble | right_nibble);
     }
